@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title><%= @title %></title>
-  <%= csrf_meta_tag %>
-  <%= render 'layouts/stylesheets' %>
-  <%= javascript_include_tag :defaults %>
-
-</head>
-  <body>
-    <div class="container">
       <header class="round">
         <%= image_tag("logo.jpg", :alt => "Customer Manager", :class => "round") %>
         <nav class="round">
@@ -19,9 +8,3 @@
           </ul>
         </nav>
       </header>
-      <section class="round">
-        <%= yield %>
-      </section>
-    </div>
-  </body>
-</html>
