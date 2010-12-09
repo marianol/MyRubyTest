@@ -1,4 +1,6 @@
 CustomerManager::Application.routes.draw do
+  resources :users
+
   resources :customers
 
   # The priority is based upon order of creation:
