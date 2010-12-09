@@ -9,19 +9,11 @@
 </head>
   <body>
     <div class="container">
-      <header class="round">
-        <%= image_tag("logo.jpg", :alt => "Customer Manager", :class => "round") %>
-        <nav class="round">
-          <ul>
-            <li><%= link_to "Home", '#' %></li>
-            <li><%= link_to "About", '#' %></li>
-            <li><%= link_to "Sign in", '#' %></li>
-          </ul>
-        </nav>
-      </header>
+      <%= render 'layouts/header' %>
       <section class="round">
         <%= yield %>
       </section>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
