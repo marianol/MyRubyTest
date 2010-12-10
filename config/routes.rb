@@ -1,4 +1,13 @@
 CustomerManager::Application.routes.draw do
+
+  
+
+
+  match '/login',  :to => 'sessions#new'
+  match '/logout', :to => 'sessions#destroy'
+  
+  get "sessions/new"
+
   match '/about',   :to => 'pages#about'
   # match '/help',    :to => 'pages#help'
   
@@ -7,7 +16,7 @@ CustomerManager::Application.routes.draw do
   get "pages/about"
 
   resources :users
-
+  resources :sessions, :only => [:new, :create, :destroy]
   resources :customers
 
   # The priority is based upon order of creation:

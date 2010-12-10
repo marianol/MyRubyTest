@@ -9,4 +9,5 @@ module UsersHelper
   def active_icon_for(user)
     user.active ? image_tag('tick.png') : image_tag('cross.png') 
   end
+  
 end
