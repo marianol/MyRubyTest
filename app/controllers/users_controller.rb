@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource 
   # GET /users
   # GET /users.xml
   def index
@@ -57,6 +58,7 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.xml
   def update
+    authorize! :assign_roles, @user if params[:user][:assign_roles]
     @user = User.find(params[:id])
 
     respond_to do |format|

@@ -2,7 +2,11 @@ require 'digest'
 
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :active,  :password, :password_confirmation
+  attr_accessible :name, :email, :active,  :password, :password_confirmation, :role
+
+
+
+  ROLES = %w[admin employee banned]
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

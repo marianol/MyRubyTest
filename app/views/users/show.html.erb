@@ -12,7 +12,10 @@
   <b>Active:</b>
   <%= active_icon_for @user %>
 </p>
-
+<p>
+  <b>Role:</b>
+  <%= @user.role %>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

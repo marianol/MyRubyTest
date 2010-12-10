@@ -30,6 +30,11 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </div>
+  <% if can? :assign_roles, @user %>
+  <div class="field">
+    <%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+  </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
