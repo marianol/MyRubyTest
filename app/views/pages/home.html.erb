@@ -1,5 +1,9 @@
 <h1>Customer Manager</h1>
 
-<p> This is the home page for the
-  Customer Manager application.</p>
-<%= link_to "Login now!", '#' , :class => "login_button round" %>
+
+<% if signed_in? %>
+  <p>Welcome back, <strong><%= current_user.name %></strong>.</p>
+<% else %>
+  <p> Welcome to our Customer Manager application.</p>
+  <%= link_to "Sign in", login_path , :class => "login_button round" %>
+<% end %>

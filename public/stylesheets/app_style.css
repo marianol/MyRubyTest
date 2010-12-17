@@ -43,6 +43,12 @@ a:visited {
   color: #069;
 }
 
+/* Main Menu */
+.mainmenu {
+  margin-top: -13px;
+  background-color:#DDDDDD;
+  float: left;
+}
 /* Navigation */
 
 nav {
