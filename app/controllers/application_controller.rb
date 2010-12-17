@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
 
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:alert] = exception.message
+    flash[:alert] = "Access denied. - Please Login or verify your permissions."
     redirect_to root_url
   end
 
